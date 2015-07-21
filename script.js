@@ -63,14 +63,60 @@ function fruitPriceUpdates() {
 setInterval('fruitPriceUpdates(fruitPrices);', 15000);
 
 $(document).ready(function(){
-	$(".buy-apple")on('click', function(){
-		user.numCurrentApples++;
-		user.totalNumApples++;
-		user.spentApples += fruitPrices[0][1];
-		user.cash -= fruitPrices[0][1];
-	var avgApple = user.spentApples / user.totalNumApples;
-	}); console.log(avgApple);
-});
+	$(".buy-apple").on('click', function(){
+		User.numCurrentApples++;
+		User.totalNumApples++;
+		User.spentApples += fruitPrices[0][1];
+		User.cash -= fruitPrices[0][1];
+	var avgApple = User.spentApples / User.totalNumApples;
+	console.log(avgApple);
+	console.log(User.cash);
+	});
+	$(".buy-orange").on('click', function(){
+		User.numCurrentOranges++;
+		User.totalNumOranges++;
+		User.spentOranges += fruitPrices[0][1];
+		User.cash -= fruitPrices[0][1];
+	var avgOrange = User.spentOrange / User.totalNumOranges;
+	console.log(avgOrange);
+	});
+	$(".buy-banana").on('click', function(){
+		User.numCurrentBananas++;
+		User.totalNumBananas++;
+		User.spentBananas += fruitPrices[0][1];
+		User.cash -= fruitPrices[0][1];
+	var avgBanana = User.spentBananas / User.totalNumBananas;
+	console.log(avgBanana);
+	});
+	$(".buy-pear").on('click', function(){
+		User.numCurrentPears++;
+		User.totalNumPears++;
+		User.spentPears += fruitPrices[0][1];
+		User.cash -= fruitPrices[0][1];
+	var avgPear = User.spentPears / User.totalNumPears;
+	console.log(avgPear);
+	});
+	$(".sell-apple").on('click', function(){
+		User.numCurrentApples--;
+		User.cash += fruitPrices[0][1];
+	console.log(User.cash);
+	});
+	$(".sell-orange").on('click', function(){
+		User.numCurrentOranges--;
+		User.cash += fruitPrices[0][1];
+	console.log(User.cash);
+	});
+	$(".sell-banana").on('click', function(){
+		User.numCurrentBananas--;
+		User.cash += fruitPrices[0][1];
+	console.log(User.cash);
+	});
+	$(".sell-pear").on('click', function(){
+		User.numCurrentPears--;
+		User.cash += fruitPrices[0][1];
+	console.log(User.cash);
+	});
+}); 
 
 
 
